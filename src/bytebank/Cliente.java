@@ -6,15 +6,9 @@ public class Cliente {
 	private String profissao;
 	
 	public Cliente(String nome, String cpf, String profissao) {
-		if(!nome.isBlank()) {
-			this.nome = nome;
-		}
-		if(!cpf.isBlank()) {
-			this.cpf = cpf;
-		}
-		if(!profissao.isBlank()) {
-			this.profissao = profissao;
-		}
+		if(!nome.isBlank()) this.nome = nome;
+		if(!cpf.isBlank()) this.cpf = cpf;
+		if(!profissao.isBlank()) this.profissao = profissao;
 	}
 	
 	public String getNome() {

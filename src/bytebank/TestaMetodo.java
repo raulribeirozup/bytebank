@@ -14,5 +14,6 @@ public class TestaMetodo {
 		contaDoRaul.transfere(100, contaDaLu);
 		System.out.println("Saldo da Lu: R$" + contaDaLu.getSaldo());
 		System.out.println("Saldo do Raul: R$" + contaDoRaul.getSaldo());
+		System.out.println("Quantidade de contas cadastradas: " + Conta.getTotal());
 	}
 }

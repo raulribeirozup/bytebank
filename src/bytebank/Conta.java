@@ -5,14 +5,12 @@ public class Conta {
     private int agencia;
     private int numero;
 	Cliente cliente;
+	private static int total;
 	
 	public Conta(int agencia, int numero) {
-		if(agencia >= 0) {
-			this.agencia = agencia;
-		}
-		if(numero >= 0) {
-			this.numero = numero;
-		}
+		Conta.total++;
+		if(agencia >= 0) this.agencia = agencia;
+		if(numero >= 0) this.numero = numero;
 	}
     
     public int getAgencia() {
@@ -53,6 +51,10 @@ public class Conta {
     		return valor;
     	}
     	return 0;
+    }
+    
+    public static int getTotal() {
+    	return Conta.total;
     }
     
     public boolean transfere(double valor, Conta destino) {
