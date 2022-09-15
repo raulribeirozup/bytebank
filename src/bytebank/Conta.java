@@ -5,6 +5,15 @@ public class Conta {
     private int agencia;
     private int numero;
 	Cliente cliente;
+	
+	public Conta(int agencia, int numero) {
+		if(agencia >= 0) {
+			this.agencia = agencia;
+		}
+		if(numero >= 0) {
+			this.numero = numero;
+		}
+	}
     
     public int getAgencia() {
 		return agencia;
